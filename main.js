@@ -2,11 +2,13 @@
 
 const slider = document.getElementById('slider');
 
-function slideLeft() {
+function slideLeft(sliderId) {
+  const slider = document.getElementById(sliderId);
   slider.scrollLeft -= 270;
 }
 
-function slideRight() {
+function slideRight(sliderId) {
+  const slider = document.getElementById(sliderId);
   slider.scrollLeft += 270;
 }
 

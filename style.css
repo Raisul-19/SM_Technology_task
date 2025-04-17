@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 body{
     background-color: #e5e5e5;
@@ -72,9 +73,19 @@ p {
     align-items: center;
 }
 
-.logo{
-    height: 100%
+
+.logo img {
+    max-width: 120px;  /* Adjust size if needed */
+    height: auto;
+    display: block;
 }
+
+.logo {
+   margin-top: 8px;
+    flex-shrink: 0;
+}
+
+
 .menu{
     display: flex;
     list-style: none;
@@ -95,8 +106,8 @@ p {
     transition: background 0.3s;
 }
 .menu a:hover {
-    background-color: #975fff;
-    color: white;
+    color: #6A2F9B;
+
   }
 
 .dropdown-content {
@@ -128,9 +139,176 @@ p {
     border: 1px solid black;
 }
 
+
+/* Logo Styling */
+.logo img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+  }
+  
+  /* Hamburger Styling */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .navbar-item {
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .menu-wrapper {
+      width: 100%;
+      display: none;
+    }
+  
+    .menu-wrapper.active {
+      display: block;
+    }
+  
+    .menu {
+      flex-direction: column;
+      width: 100%;
+      background: white;
+    }
+  
+    .menu li {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .menu a {
+      padding: 12px 20px;
+      display: block;
+    }
+  
+    .login {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+  
+    .dropdown-content {
+      position: static;
+      background-color: #f3e8ff;
+      margin-left: 20px;
+    }
+  }
+  
+
+  @media (min-width: 768px) and (max-width: 1124px) {
+    /* Make font sizes smaller */
+    .menu a,
+    .btn,
+    .log-btn,
+    .btn-primary {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  
+    h2 {
+      font-size: 32px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    /* Reduce logo size */
+    .logo img {
+      max-width: 100px;
+    }
+  
+    /* Space things out a little tighter */
+    .container {
+      margin: 0 2rem;
+    }
+  
+    .navbar-item {
+      gap: 10px;
+    }
+  
+    .menu li {
+      margin: 0 2px;
+    }
+  
+    .login {
+      gap: 6px;
+    }
+  
+    /* Dropdown fix */
+    .dropdown-content a {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 860px) {
+    /* Even smaller text & buttons */
+    .menu a,
+    .btn,
+    .log-btn,
+    .btn-primary {
+      font-size: 12px;
+      padding: 5px 8px;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    /* Logo smaller */
+    .logo img {
+      max-width: 90px;
+    }
+  
+    /* Container tighter */
+    .container {
+      margin: 0 1rem;
+    }
+  
+    /* Login buttons stacked if needed */
+    .login {
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+  
+    /* Menu spacing tighter */
+    .menu li {
+      margin: 0 1px;
+    }
+  
+    .dropdown-content a {
+      padding: 6px 8px;
+      font-size: 12px;
+    }
+  }
+  
+
+
+
 /* navigation bar styling end */
 
 /* home page styling start */
+
+
+
 .banner-section{
     padding: 70px 0 30px 0;
 
@@ -150,8 +328,8 @@ p {
     font-size: 16px;
     display: inline-block;
     background: #fff;
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 8px 18px;
+    border-radius: 15px;
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -164,7 +342,6 @@ h1 {
   
 .highlight {
     color: #A554E6;
-    font-weight: bold;
 }
   
 .price {
@@ -193,6 +370,7 @@ h1 {
 }
   
 .videos img {
+    margin-top: 5px;
     border-radius: 20px;
     width: 50%;
     height: auto;
@@ -200,76 +378,153 @@ h1 {
 }
   
 .social {
+    margin-top: 5px;
     background: white;
     width: 75%;
     margin-left: auto;
-    padding: 12px;
+    padding: 12px 25px;
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    
 }
   
 .social p {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 20px;
-    margin-bottom: 10px;
 }
   
 .icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
 }
   
 .icons img {
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
-.banner-foot{
+
+
+
+.d{
+color: #000;
+}
+
+.banner-foot {
     background-color: white;
-    padding:50px 0;
+    padding: 30px 50px 0;
     margin-top: 20px;
 }
-.banner-foot-item{
+
+
+.banner-foot-item {
     display: flex;
+    align-items: stretch;
 }
-.clients{
-    width: 20%;
+
+.clients {
+    width: 25%;
+    padding: 20px;
     border-right: 2px solid black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left; /* <-- Add this */
 }
-.clients h3{
-    font-family: "Poppins", sans-serif;
+
+
+.clients h3 {
+    text-align: left;
     font-weight: 600;
     font-size: 32px;
 }
-.clients p{
-    font-family: "Poppins", sans-serif;
+
+.clients p {
     font-weight: 400;
     font-size: 20px;
     margin-top: 0;
     text-transform: capitalize;
+    
 }
-.items ul{
-    padding-top: 16px;
-    text-decoration: none;
-    list-style-type: none;
-    text-transform: capitalize;
+
+.clients h3,
+.clients p {
+    text-align: center;
+}
+
+
+.items {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee ul {
+   
+    align-items: center;
     display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 16px 0;
+    margin: 0;
+    animation: scroll 20s linear infinite;
+    white-space: nowrap;
 }
-.items ul li{
-    display: inline-block;
-    align-content: center;
-    padding: 8px 16px;
-    margin: 0 12px;
+
+.marquee ul li {
+    display: inline-flex;
+    align-items: center;
     font-size: 24px;
     font-weight: bold;
-    align-items: center;
+    text-transform: capitalize;
+    
+    margin: 0 12px;
 }
-.items ul li img{
-    width: 22px;
+
+.marquee ul li img {
+    margin-top: 10px;
+    width: 62px !important;
+    height: auto;
+    margin-right: 10px;
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Optional: Responsive tweak */
+@media (max-width: 768px) {
+    .banner-foot-item {
+        flex-direction: column;
+    }
+
+    .clients, .items {
+        width: 100%;
+    }
+
+    .clients {
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+
+}
+
  /* home page styling end */
 
 
@@ -306,14 +561,14 @@ h1 {
  .provide-services h4{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
     text-transform: capitalize;
     color: #101828;
  }
  .provide-services p{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 26px;
     margin-top: 0;
  }
@@ -321,6 +576,10 @@ h1 {
     color: green;
     margin-right: 5px;
  }
+
+ .hhh{
+  margin-top: 10px;
+}
 
  .line{
     border: 1px solid black;
@@ -333,7 +592,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     border: 2px solid rgba(0, 0, 0, 0.522);
-    padding: 22px;
+    padding: 12px;
     border-radius: 15px;
     margin: 15px 0;
  }
@@ -377,23 +636,23 @@ h1 {
 
 }
 .card{
-    width: 30%;
+    width: 32%;
     text-align: justify;
-    padding: 18px;
+    padding: 22px;
     background-color: white;
     border-radius: 15px;
     margin: 10px 0;
 
 }
 .card i{
-    color: #7c3aed;
+    color: #A554E6;
 }
 .card h3{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-transform: capitalize;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
 
 }
@@ -544,15 +803,15 @@ h1 {
     justify-content: space-between;
 }
 .white-level-image{
-    width: 35%;
+    width: 42%;
 
 }
 .white-level-image img{
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 .white-level-text{
-    width: 60%;
+    width: 53%;
     align-content: center;
 }
 .white-level-text h2{
@@ -590,10 +849,11 @@ h1 {
 
 }
 .client-msg-card{
-    width: 48%;
+    width: 49%;
     padding: 30px;
-    margin: 18px;
+    margin: 18px 0;
     background: white;
+    border: 1px solid #009FE254;
     border-radius: 15px;
 
 }
@@ -800,15 +1060,18 @@ footer{
     font-size: 16px;
     display: block;
     width: 100%;
-    padding: 8px 12px;
-    margin: 10px 0;
+    padding: 10px 12px;
+    margin: 14px 0;
     border: 1px solid rgba(119, 119, 119, 0.322);
     border-radius: 10px;
     overflow: hidden;
 }
+.contact textarea{
+    height: 100px;
+}
 .submit{
     display: block;
-    width: 50%;
+    width: 100%;
     background-color: black;
     color: white;
     padding: 8px 12px;
@@ -842,11 +1105,6 @@ footer{
         margin: 0 20px;
     }
 
-    /* nav bar */
-
-
-
-
 
     /* banner serction */
 
@@ -877,7 +1135,7 @@ footer{
         width: 100%;
     }
     .social{
-        width: 94%;
+        width: 100%;
         margin-left: 0;
         padding-top: 3px;
         text-align: center;
@@ -928,7 +1186,7 @@ footer{
        
     }
     .card{
-        width: 92%;
+        width: 100%;
     }
     .extra-card{
         display: block;
@@ -974,7 +1232,7 @@ footer{
         display: block;
     }
     .client-msg-card{
-        width: 90%;
+        width: 100%;
         margin: 18px 0;
         padding: 20px;
     }
@@ -982,7 +1240,7 @@ footer{
         display: block;
     }
     .client-msg-two .client-msg-card{
-        width: 90%;
+        width: 100%;
     }
  
 
@@ -1020,7 +1278,7 @@ footer{
  
     }
     .contact{
-        width: 90%;
+        width: 100%;
         text-align: center
         ;
     }

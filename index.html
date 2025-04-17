@@ -15,36 +15,42 @@
     <!-- navigation bar start  -->
 
     <nav class="navbar">
-        <div class="container navbar-item">
-            <div class="logo">
-                <img src="image/logo.png" alt="logo-loading...">
-            </div>
-            <div class="menu">
-                <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li>
-                      <a href="#">services  <i class="fa-solid fa-chevron-down"></i></a>
-                      <div class="dropdown-content">
-                        <a href="#">web design</a>
-                        <a href="#">SQA</a>
-                        <a href="#">app aevelopment</a>
-                      </div>
-                    </li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">reviews</a></li>
-                    <li><a href="#">pricing</a></li>
-                    <li><a href="#">white level</a></li>
-                  </ul>
-
-            </div>
-            <div class="login">
-                <button class="btn log-btn">log in</button>
-                <button class=" btn btn-primary">book a demo</button>
-
-            </div>
-
+      <div class="container navbar-item">
+        <div class="logo">
+          <img src="image/logo.png" alt="logo-loading...">
         </div>
+    
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
+    
+        <!-- Menu -->
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#">services <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <a href="#">web design</a>
+                <a href="#">SQA</a>
+                <a href="#">app development</a>
+              </div>
+            </li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">reviews</a></li>
+            <li><a href="#">pricing</a></li>
+            <li><a href="#">white level</a></li>
+          </ul>
+        </div>
+    
+        <div class="login">
+          <button class="btn log-btn">log in</button>
+          <button class="btn btn-primary">book a demo</button>
+        </div>
+      </div>
     </nav>
+    
 
     <!-- navigation bar end  -->
 
@@ -75,34 +81,47 @@
               <img src="image/banner-video.png" alt="video 2" />
             </div>
             <div class="social">
-              <p>Social channel we work with</p>
+              <p class="pp">Social channel we work with</p>
               <div class="icons">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-                <img src="https://cdn-icons-png.flaticon.com/512/2504/2504929.png" alt="X" />
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn" />
+                <img src="image/instagram.png" alt="Instagram" />
+                <img src="image/facebook.png" alt="Facebook" />
+                <img src="image/tweeter.png" alt="tweeter" />
+                <img src="image/youtube.png" alt="YouTube" />
+                <img src="image/linkdin.png" alt="LinkedIn" />
+                <img src="image/linkdin.png" alt="LinkedIn" />
+                
               </div>
             </div>
           </div>
        </div>
+
+
        <div class="banner-foot">
         <div class="container banner-foot-item">
             <div class="clients">
-                <h3>50+</h3>
-                <p>Our clients are feature in</p>
+                <h3 class="d">50+</h3>
+                <p>Our clients are featured in</p>
             </div>
             <div class="items">
-                <ul>
-                    <li><img src="image/boltshift.png" alt=""> boltshift</li>
-                    <li><img src="image/lightbox.png" alt=""> lightbox</li>
-                    <li><img src="image/fetherdev.png" alt=""> fetherdev</li>
-                    <li><img src="image/spherule.png" alt=""> spherule</li>
-                    <li><img src="image/global.png" alt=""> global</li>
-                </ul>
+                <div class="marquee">
+                    <ul>
+                        <li><img src="image/boltshift.png" alt="">boltshift</li>
+                        <li><img src="image/lightbox.png" alt="">lightbox</li>
+                        <li><img src="image/fetherdev.png" alt="">fetherdev</li>
+                        <li><img src="image/global.png" alt="">global</li>
+                        <li><img src="image/spherule.png" alt="">spherule</li>
+                        <li><img src="image/boltshift.png" alt="">boltshift</li>
+                        <li><img src="image/lightbox.png" alt="">lightbox</li>
+                        <li><img src="image/fetherdev.png" alt="">fetherdev</li>
+                        <li><img src="image/global.png" alt="">global</li>
+                        <li><img src="image/spherule.png" alt="">spherule</li>
+                    </ul>
+                </div>
             </div>
         </div>
-       </div>
+    </div>
+
+       
       </section>
 
     <!-- home page end -->
@@ -161,7 +180,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <button class="btn btn-secondary">get started</button>
+                    <button class="btn btn-secondary hhh">get started</button>
                 </div>
             </div>
 
@@ -305,8 +324,8 @@
           </div>
         
           <div class="slider-buttons">
-            <button onclick="slideLeft()"><i class="fa-solid fa-angle-left"></i></button>
-            <button onclick="slideRight()"><i class="fa-solid fa-angle-right"></i></button>
+            <button onclick="slideLeft('slider')"><i class="fa-solid fa-angle-left"></i></button>
+            <button onclick="slideRight('slider')"><i class="fa-solid fa-angle-right"></i></button>
           </div>
     </div>
 
@@ -355,8 +374,8 @@
           </div>
         
           <div class="slider-buttons-two">
-            <button onclick="slideLeft()"><i class="fa-solid fa-angle-left"></i></button>
-            <button onclick="slideRight()"><i class="fa-solid fa-angle-right"></i></button>
+            <button onclick="slideLeft('slider_two')"><i class="fa-solid fa-angle-left"></i></button>
+            <button onclick="slideRight('slider_two')"><i class="fa-solid fa-angle-right"></i></button>
           </div>
     </div>
 
@@ -599,7 +618,7 @@
           for a flat monthly price. Quality content, posted to
           all your social media channels.Take your socials to the next level:</p>
         
-        <button class="log-btn">log in</button>
+        <button class="log-btn btn">log in</button>
         <button class="btn btn-secondary">book a demo</button>
 
       </div>
@@ -654,9 +673,26 @@
 
 <!-- footer page design end -->
 
+
+
+
     
 
 <!-- javascript file link -->
+
+<script>
+  function toggleMenu() {
+    const menuWrapper = document.querySelector('.menu-wrapper');
+    menuWrapper.classList.toggle('active');
+  }
+</script>
+
+
+
+
+
+
+
 <script src="main.js"></script>
     
 </body>
